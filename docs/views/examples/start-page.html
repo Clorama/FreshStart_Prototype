@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Fresh Start: Identification
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="https://www.gov.uk">Home</a></li>
+      <li><a href="/docs/examples/task-list-page">Tasklist</a></li>
+      <li>Identification</li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge"> Fresh Start: Identification
+       <!-- {% if serviceName %} {{ serviceName }} {% endif %}-->
+      </h1>
+
+      <p>This section will walk you through:</p>
+
+      <ul class="list list-bullet">
+        <li>how to get your government issued IDs</li>
+        <li>what documents you'll need and how to get them</li>
+        <li>Where to submit your applications for your IDs</li>
+        <li>you'll need your IDs to be readily available for hire by employers </li>
+      </uL>
+
+      <p><i>Filling out the required applications can take up to 30 minutes.</i>
+      <p> After submitting all of your documents, you can receive your id within two weeks. It will be a piece of cake!</p>
+
+      <p>
+        <a class="button button-start" href="/docs/examples/template-question-page-blank" role="button">Let's Get Started</a>
+      </p>
+
+      <h2 class="heading-medium">Before you start</h2>
+
+      <p>You can also print out the applications and <a href="#">apply by mail.</a></p>
+
+      <p>Make sure you have completed <a href="#">Section 1: Check Before You Start</a></p>
+
+      <p>You can stop and save your progress at any time by sending a copy of your track progress to your email, or logging in with your facebook account.</p>
+
+    </div>
+    <div class="column-third">
+
+      <aside class="govuk-related-items" role="complementary">
+        <h2 class="heading-medium" id="subsection-title">Other Resources</h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="font-xsmall">
+            <li><a href="#">Partners for Progress</a></li>
+            <li><a href="#">Alaska Native Justice Center</a></li>
+            <li><a href="#" class="bold-xsmall">More <span class="visuallyhidden">in Subsection</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Fresh Start - Birth Certificate
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/docs/examples/start-page">Back</a>
+
+      <h1 class="heading-large">
+          Do you have a<br> social security card?
+        </h1>
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              Where should we send your new passport?
+            </legend>
+<!--NO Answer-->
+             <div class="multiple-choice" >
+              <input id="radio-other-address" type="radio" name="radio-indent-group" value="Other">
+              <label for="radio-other-address">No</label>
+            </div>
+
+<!--YES Answer-->
+            <div class="multiple-choice" data-target="example-other-address">
+              <input id="radio-home-address" type="radio" name="radio-indent-group" value="Home">
+              <label for="radio-home-address">Yes</label>
+            </div>
+
+
+             <div class="panel panel-border-narrow js-hidden" id="example-other-address">
+
+              <h2 class="heading-medium">
+                Nice! You can skip ahead to the last step</b>.
+              </h2>
+
+              <fieldset>
+
+                <legend class="visually-hidden">
+                 That's great! 
+                </legend>
+
+                <div class="form-group">
+          <input class="button" type="submit" value="Continue" a href="/template-question-page-ss">
+        </div>
+
+               
+
+              </fieldset>
+              </div>
+<!--I don't know Answer-->
+            <div class="multiple-choice" data-target="example-other-address">
+              <input id="radio-other-address" type="radio" name="radio-indent-group" value="Other">
+              <label for="radio-other-address">I don't know</label>
+            </div>
+
+            <div class="panel panel-border-narrow js-hidden" id="example-other-address">
+
+              <h2 class="heading-medium">
+                A birth certificate is...If you are a native Alaskan <b>[go here]</b>.
+              </h2>
+
+              <fieldset>
+
+                <legend class="visually-hidden">
+                  Your other address
+                </legend>
+
+                <div class="form-group form-group-compound">
+                  <label class="form-label" for="address-line-1">Street</label>
+                  <input class="form-control" type="text" id="address-line-1">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label visuallyhidden" for="address-line-2">Street</label>
+                  <input class="form-control" type="text" id="address-line-2">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="address-town">Town or City</label>
+                  <input class="form-control form-control-1-4" type="text" id="address-town">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="address-postcode">Postcode</label>
+                  <input class="form-control form-control-1-8" type="text" id="address-postcode">
+                </div>
+
+              </fieldset>
+
+            </div>
+          </fieldset>
+        </div>
+
+      </form>
+
+   <!--   <h1 class="heading-large">Do you have a birth certificate?
+      </h1>
+<form>
+  <div class="form-group">
+    <fieldset class="inline">
+
+      <legend class="visually-hidden">Do you have a birth certificate?</legend>
+
+      <div class="multiple-choice">
+        <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+        <label for="radio-inline-1">Yes</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+        <label for="radio-inline-2">No</label>
+      </div>
+
+       <div class="multiple-choice">
+        <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+        <label for="radio-inline-2">I don't know</label>
+      </div>
+
+    </fieldset>
+  </div>
+  <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+</form>
+
+    <!--  <form class="form" action="/url/of/next/page" method="post">
+
+        <p>Do you have a Birth Certificate?</p>
+
+        <p>[See <a href="https://govuk-elements.herokuapp.com/form-elements/">GOV.UK Elements</a> for examples]</p>
+
+        
+
+      </form>-->
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

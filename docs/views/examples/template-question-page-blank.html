@@ -1,0 +1,190 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Fresh Start - Birth Certificate
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/docs/examples/start-page">Back</a>
+
+      <h1 class="heading-large">
+          Do you have a<br> social security card?
+        </h1>
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              Where should we send your new passport?
+            </legend>
+<!--YES Answer-->
+            <div class="multiple-choice" data-target="example-yes-ss">
+              <input id="radio-home-address" type="radio" name="radio-indent-group" value="Home">
+              <label for="radio-yes-ss">Yes</label>
+            </div>
+
+
+             <div class="panel panel-border-narrow js-hidden" id="example-yes-ss">
+
+              <h2 class="heading-medium">
+                Beautiful! You can skip ahead to the next step</b>.
+              </h2>
+
+              <fieldset>
+
+                <div class="form-group">
+          <a href="/docs/examples/template-question-page-bc"><input class="button" type="submit" value="Continue" ></a>
+        </div>
+
+              </fieldset>
+              </div>
+
+<!--NO Answer-->
+             <div class="multiple-choice" data-target="example-other-address" >
+              <input id="radio-other-address" type="radio" name="radio-indent-group" value="Other">
+              <label for="radio-other-address">No</label>
+            </div>
+
+             <div class="panel panel-border-narrow js-hidden" id="example-other-address">
+
+              <h2 class="heading-medium">
+                No Problem! Let's walk you through how to get it.</b>.
+              </h2>
+
+                  <div class="form-group">
+          <a href="/docs/examples/branching"><input class="button" type="submit" value="Get my card" ></a>
+        </div>
+
+  <!--If no, Answers conditional logic          
+                <h1 class="heading-medium">
+  Were you born in the state of Alaska?
+</h1>
+
+<form>
+  <div class="form-group">
+    <fieldset class="inline">
+
+      <legend class="visually-hidden">Do you already have a personal user account?</legend>
+
+      <div class="multiple-choice">
+        <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+        <label for="radio-inline-1">Yes</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+        <label for="radio-inline-2">No</label>
+      </div>
+
+    </fieldset>-->
+  </div>
+
+
+</form>
+
+           <!-- <fieldset>
+
+                <legend class="visually-hidden">
+                  Your other address
+                </legend>
+
+                <div class="form-group form-group-compound">
+                  <label class="form-label" for="address-line-1">Street</label>
+                  <input class="form-control" type="text" id="address-line-1">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label visuallyhidden" for="address-line-2">Street</label>
+                  <input class="form-control" type="text" id="address-line-2">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="address-town">Town or City</label>
+                  <input class="form-control form-control-1-4" type="text" id="address-town">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="address-postcode">Postcode</label>
+                  <input class="form-control form-control-1-8" type="text" id="address-postcode">
+                </div>
+
+              </fieldset>-->
+            </div>
+
+
+
+
+<!--I don't know Answer-->
+            <div class="multiple-choice" data-target="example-idk">
+              <input id="radio-other-address" type="radio" name="radio-idk" value="Other">
+              <label for="radio-idk">I don't know</label>
+            </div>
+
+            <div class="panel panel-border-narrow js-hidden" id="example-idk">
+
+              <h2 class="heading-medium">
+                No worries--This is a certificate given for every resident that was born in Alaska or the United States.</h2>
+                <h2>
+                If you were born in the USA, you will have one. Click on 'No' and we will walk you through how to get one. </h2>
+                <br>
+                <h2>
+                If you are a native or rural Alaskan, you will have something different <b>[go here]</b>.
+              </h2>
+
+            </div>
+          </fieldset>
+        </div>
+
+      </form>
+
+   <!--   <h1 class="heading-large">Do you have a birth certificate?
+      </h1>
+<form>
+  <div class="form-group">
+    <fieldset class="inline">
+
+      <legend class="visually-hidden">Do you have a birth certificate?</legend>
+
+      <div class="multiple-choice">
+        <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+        <label for="radio-inline-1">Yes</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+        <label for="radio-inline-2">No</label>
+      </div>
+
+       <div class="multiple-choice">
+        <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+        <label for="radio-inline-2">I don't know</label>
+      </div>
+
+    </fieldset>
+  </div>
+  <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+</form>
+
+    <!--  <form class="form" action="/url/of/next/page" method="post">
+
+        <p>Do you have a Birth Certificate?</p>
+
+        <p>[See <a href="https://govuk-elements.herokuapp.com/form-elements/">GOV.UK Elements</a> for examples]</p>
+
+        
+
+      </form>-->
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
