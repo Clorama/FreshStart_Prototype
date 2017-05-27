@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Check your answers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">
+        Based on your answers, we recommend you start with the I-9 Eligibility path.
+      </h1>
+
+      <h1 class="heading-medium">
+        Complete the following task in order, and you'll be ready to hire for your next job in no time.
+        This will be a piece of cake!
+      </h1>
+
+      <div class="form-group">
+
+        <table class="check-your-answers">
+
+          <thead>
+            <tr>
+              <th colspan="2">
+                <h2 class="heading-medium">
+                  I-9 Eligibility Checklist
+                </h2>
+              </th>
+              <th>
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>
+                Birth Certificate
+              </td>
+              <td>
+                {{data['Birth Certificate']}}
+              </td>
+              <td class="change-answer">
+                <a href="/docs/examples/ak-bc">
+                  Start here! <span class="visuallyhidden">Birth Certificate</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Social Security Card
+              </td>
+              <td>
+                {{data['vehicle-type']}}
+              </td>
+              <td class="change-answer">
+                <a href="/docs/examples/ss-ak">
+                  Start <span class="visuallyhidden">Social Security</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Alaskan State ID
+              </td>
+              <td>
+                <ul>
+                  {% for feature in data['vehicle-features'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                    <li>Not Completed</li>
+                  {% endfor %}
+                </ul>
+              </td>
+              <td class="change-answer">
+                <a href="/docs/examples/ak-id">
+                  Start <span class="visuallyhidden">Alaska State ID</span>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="form-group">
+        <p>
+          <a href="/docs/examples/start-page">
+            Oops! I do NOT want ID's for a job.
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

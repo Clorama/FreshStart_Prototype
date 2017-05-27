@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Example - Passing data
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "includes/breadcrumb_examples.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+     <h2 class="heading-medium">
+          Tell us, which ID's do you currently have?
+        </h2>
+        <p>
+          Select all the ones you already have.
+        </p>
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visually-hidden">What ID do you have?</legend>
+
+            <div class="multiple-choice">
+             <input id="Select-ID-Passport" name="select-current-id" type="checkbox" value="Passport" {{ checked("select-current-id", "Passport") }}>
+              <label for="Select-ID-Passport">Passport</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="select-id-birth-certificate" name="select-current-id" type="checkbox" value="Birth Certificate" {{ checked("select-current-id", "Birth Certificate") }}>
+              <label for="select-id-birth-certificate">Birth Certificate</label>
+            </div>
+
+            <div class="multiple-choice">
+            <input id="select-id-state-id" name="select-current-id" type="checkbox" value="Alaska State ID or Driver's License" {{ checked("select-current-id", "Alaska State ID or Driver's License") }}>
+              <label for="select-id-state-id">Alaska State ID or Driver's License</label>
+              </div>
+
+            <div class="multiple-choice" data-target="example-different-country">
+              <input id="select-id-social-security" name="select-current-id" type="checkbox" value="Social Security Card" {{ checked("select-current-id", "Social Security Card") }}>
+              <label for="select-id-social-security">Social Security Card</label>
+            </div>
+
+            <div class="panel panel-border-narrow js-hidden" id="example-different-country">
+              <label class="form-label" for="nationalities-other-country">Country name</label>
+              <input class="form-control" type="text" id="nationalities-other-country" name="nationalities-other-country">
+            </div>
+
+            <p class="form-block">or</p>
+
+               <div class="multiple-choice">
+              <input id="select-id-none" name="select-current-id" type="checkbox" value="None" {{ checked("select-current-id", "None") }}>
+              <label for="select-id-none">I don't have any</label>
+            </div>
+
+          </fieldset>
+
+          <div class="form-group">
+         <a href="/docs/examples/id-screen-state-question"> <input type="submit" class="button" value="Continue"></a>
+        </div>
+
+     <!-- Previously, <form action="/docs/examples/pass-data/vehicle-check-answers" method="post" class="form">
+
+      <form action="/docs/examples/pass-data/IDTracks" method="post" class="form">
+
+        <h1 class="heading-medium">
+          Tell us, which ID's do you already have with you?
+        </h1>
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              Tell us, which ID's do you already have with you?
+            </legend>
+
+            <p>
+              Select all the ID's you have. 
+            </p>
+
+            <div class="multiple-choice">
+              <input id="Select-ID-Passport" name="select-current-id" type="checkbox" value="Passport" {{ checked("select-current-id", "Passport") }}>
+              <label for="Select-ID-Passport">Passport</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="select-id-birth-certificate" name="select-current-id" type="checkbox" value="Birth Certificate" {{ checked("select-current-id", "Birth Certificate") }}>
+              <label for="select-id-birth-certificate">Birth Certificate</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="select-id-social-security" name="select-current-id" type="checkbox" value="Social Security Card" {{ checked("select-current-id", "Social Security Card") }}>
+              <label for="select-id-social-security">Social Security Card</label>
+            </div>
+
+             <div class="multiple-choice">
+              <input id="select-id-state-id" name="select-current-id" type="checkbox" value="Alaska State ID or Driver's License" {{ checked("select-current-id", "Alaska State ID or Driver's License") }}>
+              <label for="select-id-state-id">Alaska State ID or Driver's License</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="select-id-none" name="select-current-id" type="checkbox" value="None" {{ checked("select-current-id", "None") }}>
+              <label for="select-id-none">I don't have any</label>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+         <a href="docs/examples/id-screen-state-question"> <input type="submit" class="button" value="Continue"></a>
+        </div>
+
+      </form>-->
+
+    </div>
+  </div>
+</main>
+{% endblock %}
