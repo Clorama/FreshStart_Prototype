@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  You have a passport!
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h1 class="bold">Good News!</h1>
+        <p class="bold-large">You are ready to work.</p>
+      </div>
+      
+      <p>Your passport is all you need to meet the i-9 eligibility requirement. You are now ready to start the job search. </p>
+
+      <p><a href="/docs/examples/IDTracks">Did you want to learn how to get another ID?</a></p>
+
+      
+
+      <div class="form-group">
+          <input type="submit" class="button" value="Start the Next Task">
+        </div>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
