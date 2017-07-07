@@ -58,6 +58,26 @@ router.get('/examples/over-18', function (req, res) {
   }
 })
 
+/*. ATTEMPT TO ADD FILTER LOGIC TO ID TRACKS
+
+router.get('/docs/examples/id-screen', function (req, res) {
+  // get the answer from the query string (eg. ?over18=false)
+  var passport = req.query.passport
+  var birthcertificate = req.query.birthcertificate
+  var socialsecurity = req.query.socialsecurity
+  var stateid = req.query.stateid
+
+  if (passport === 'true') {
+    // redirect to the relevant page
+    res.redirect('/docs/examples/passport-screen')
+  } else if{ 
+    // if over18 is any other value (or is missing) render the page requested
+    res.render('examples/over-18')
+  }
+})
+
+*/
+
 module.exports = router
 
 // Strip off markdown extensions if present and redirect
