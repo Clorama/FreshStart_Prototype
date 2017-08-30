@@ -3,6 +3,7 @@
 To view live, check it out on Heroku: https://walkmethru-muni-prototype.herokuapp.com
 
 Username: username
+
 Password: password
 
 ## About this prototype
