@@ -1,8 +1,24 @@
 # Code for America: Re-Entrant Roadmap Prototype
 
+To view live, check it out on Heroku: https://walkmethru-muni-prototype.herokuapp.com
+
+Username: username
+
+Password: password
+
 ## About this prototype
 
 This prototype is for demonstrating the idea of a solution to serve a need that has been validated through user testing with Re-Entrants at Partners for Progress (and job seekers and Case Managers from other service providers).
+
+## What does “alpha” mean?
+The alpha stage of product development is a short phase after a deep discovery in which teams quickly design, build, and test concepts with users.
+
+The aim of the alpha phase is to:
+
+1. Show that project is technically feasible
+2. Build and test early versions of a product with real users
+3. Gather feedback from stakeholders and key partners to identify improvements for a beta release
+In other words: this prototype is a work-in-progress... and we want your help making it better.
 
 ## Installation instructions
 
@@ -31,12 +47,4 @@ Ask people questions in small bite-sized chunks, so as not to overwhelm with mul
 6. Personalize and tailor applications...
 Only show applicants information related to their specific circumstance.
 
-## What does “alpha” mean?
-The alpha stage of product development is a short phase after a deep discovery in which teams quickly design, build, and test concepts with users.
 
-The aim of the alpha phase is to:
-
-1. Show that project is technically feasible
-2. Build and test early versions of a product with real users
-3. Gather feedback from stakeholders and key partners to identify improvements for a beta release
-In other words: this prototype is a work-in-progress... and we want your help making it better.
